@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GamsızAI Kullanım Kılavuzu</title>
+<meta name="description" content="Murat Gamsız yayınlarındaki yapay zeka botu GamsızAI'ye nasıl soru sorulur, komutlar ve kurallar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  /* C64 renkleri: kenarlik #6c5eb5, ekran #352879, yazi #a59fe8 */
+  :root{--kenar:#6c5eb5;--ekran:#352879;--yazi:#a59fe8;--beyaz:#fff;--soluk:#c9c4f5;--cizgi:#4b3f9c;--altin:#ffd23d}
+  *{box-sizing:border-box}
+  html{background:var(--kenar)}
+  body{margin:0;background:var(--kenar);color:var(--soluk);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .ekran{max-width:820px;margin:28px auto;background:var(--ekran);padding:36px 32px 28px;box-shadow:inset 0 0 80px rgba(0,0,0,.35)}
+  .piksel{font-family:"Press Start 2P",monospace;color:var(--yazi);font-size:13px;line-height:2;margin:0}
+  .piksel b{color:var(--beyaz);font-weight:normal}
+  .imlec{display:inline-block;width:.9em;height:1em;background:var(--yazi);vertical-align:-2px;animation:yanip 1s steps(1) infinite}
+  @keyframes yanip{50%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){.imlec{animation:none}}
+  h1{color:var(--beyaz);font-size:1.75rem;line-height:1.25;margin:28px 0 6px}
+  .alt{margin:0 0 8px;color:var(--yazi)}
+  h2{color:var(--beyaz);font-size:1.15rem;margin:36px 0 10px;padding-top:20px;border-top:2px dashed var(--cizgi)}
+  h2 .no{font-family:"Press Start 2P",monospace;font-size:.7rem;color:var(--yazi);margin-right:10px;vertical-align:2px}
+  p{margin:8px 0} a{color:var(--altin)} strong{color:var(--beyaz)}
+  code,.kmt{font-family:ui-monospace,Consolas,monospace;background:rgba(0,0,0,.28);color:var(--beyaz);padding:2px 6px;border-radius:3px;white-space:nowrap}
+  .ornekler{list-style:none;padding:0;margin:12px 0;display:grid;gap:6px}
+  .ornekler li{background:rgba(0,0,0,.22);padding:8px 12px;border-left:3px solid var(--yazi);font-family:ui-monospace,Consolas,monospace;color:var(--beyaz);font-size:.95rem;overflow-wrap:anywhere}
+  table{width:100%;border-collapse:collapse;margin:10px 0}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--cizgi);vertical-align:top}
+  th{color:var(--yazi);font-weight:600;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+  td:first-child{width:34%}
+  ul.liste{padding-left:20px;margin:8px 0} ul.liste li{margin:4px 0}
+  .uye{border:2px solid var(--altin);padding:4px 18px 14px;margin-top:14px;background:rgba(255,210,61,.05)}
+  .uye h2{border:0;padding-top:12px;margin-top:6px}
+  .not{font-size:.92rem;color:var(--yazi)}
+  footer{margin-top:40px;padding-top:18px;border-top:2px dashed var(--cizgi);font-size:.92rem}
+  footer .piksel{font-size:11px;margin-top:14px}
+  @media (max-width:600px){
+    .ekran{margin:0;padding:24px 16px}
+    .piksel{font-size:10px}
+    h1{font-size:1.45rem}
+    td:first-child{width:auto}
+    table,tbody,tr,td{display:block;width:100%}
+    thead{display:none}
+    tr{padding:8px 0;border-bottom:1px solid var(--cizgi)}
+    td{border:0;padding:3px 0}
+  }
+</style>
+</head>
+<body>
+<main class="ekran">
+  <p class="piksel">&nbsp;&nbsp;**** <b>GAMSIZAI BASIC V2</b> ****<br>
+  64K RAM SYSTEM &nbsp;YAPAY ZEKA HAZIR<br><br>READY.<br><span class="imlec"></span></p>
+
+  <h1>GamsızAI'ye nasıl soru sorulur?</h1>
+  <p class="alt">Murat Gamsız'ın canlı yayınlarında sohbete katılan yapay zeka botu.</p>
+
+  <h2><span class="no">01</span>Soru sor</h2>
+  <p>Chat'e <code>!sor</code> yazıp sorunu ekle ya da mesajında <strong>GamsızAI</strong> adını geçir. Bot cevabı adını yazarak verir.</p>
+  <ul class="ornekler">
+    <li>!sor yayın kaç saattir sürüyor</li>
+    <li>!sor Murat'ın ekran kartı ne</li>
+    <li>GamsızAI Discord sunucusu var mı?</li>
+    <li>!sor bugün İstanbul'da hava nasıl</li>
+    <li>!sor dolar kaç TL</li>
+    <li>!sor Galatasaray maçı kaç kaç bitti</li>
+  </ul>
+
+  <h2><span class="no">02</span>Neleri bilir?</h2>
+  <ul class="liste">
+    <li><strong>Yayını:</strong> hangi oyun oynanıyor, yayın ne zaman başladı, kaç kişi izliyor, chat'te ne konuşuluyor.</li>
+    <li><strong>Murat'ı:</strong> bilgisayarı, kamerası, mikrofonu ve diğer ekipmanları, grafik ayarları, oyun içi adı, Discord ve sosyal medya hesapları.</li>
+    <li><strong>Güncel bilgiler:</strong> hava durumu, TCMB döviz kurları, futbol sonuçları ve son teknoloji haberlerinin başlıkları.</li>
+    <li><strong>Genel konular:</strong> oyun, donanım ve teknoloji soruları.</li>
+  </ul>
+  <p class="not">Bot gerekirse internete de bakar: kanal üyesi olmayanlar için kişi başı günde 1 arama.</p>
+
+  <h2><span class="no">03</span>Komutlar</h2>
+  <table>
+    <thead><tr><th>Komut</th><th>Ne yapar?</th></tr></thead>
+    <tbody>
+      <tr><td><span class="kmt">!sor &lt;soru&gt;</span></td><td>Bota soru sorar.</td></tr>
+      <tr><td><span class="kmt">!bot</span></td><td>Botu ve komutlarını kısaca tanıtır.</td></tr>
+      <tr><td><span class="kmt">!hakkim</span></td><td>Kaç soru hakkın kaldığını söyler.</td></tr>
+      <tr><td><span class="kmt">!konu</span></td><td>Yayında şu an ne yapıldığını söyler.</td></tr>
+    </tbody>
+  </table>
+  <p class="not"><code>!server</code>, <code>!sistem</code>, <code>!instagram</code> gibi sabit komutlar Nightbot'a aittir, onlar da çalışmaya devam eder.</p>
+
+  <h2><span class="no">04</span>Sınırlar</h2>
+  <ul class="liste">
+    <li>Herkesin <strong>saatte 5 soru</strong> hakkı var.</li>
+    <li>Aynı kişiye en erken <strong>45 saniyede bir</strong> cevap verilir.</li>
+    <li>Chat kalabalıksa sorular sıraya girer, birkaç saniye geç cevap gelebilir.</li>
+    <li>Süper Chat'te sorulan sorular soru hakkından düşmez.</li>
+  </ul>
+
+  <section class="uye">
+    <h2><span class="no">05</span>💜 Kanal üyelerine özel</h2>
+    <p>YouTube'daki <strong>Katıl</strong> butonuyla üye olanlar botta şu ayrıcalıkları alır:</p>
+    <table>
+      <thead><tr><th>Ayrıcalık</th><th>Açıklama</th></tr></thead>
+      <tbody>
+        <tr><td>Daha çok soru</td><td>Saatte 15 soru, 15 saniye bekleme; kalabalıkta soruları önce cevaplanır.</td></tr>
+        <tr><td><span class="kmt">!ara &lt;konu&gt;</span></td><td>Bot internette araştırıp cevaplar.</td></tr>
+        <tr><td><span class="kmt">!murata &lt;soru&gt;</span></td><td>Murat'a soru bırakır; soru yayın ekranında görünür. 10 dakikada bir.</td></tr>
+        <tr><td><span class="kmt">!topla &lt;bütçe&gt;</span></td><td>Bütçene göre İtopya ve Akakçe fiyatlarıyla PC toplar. Günde 1.</td></tr>
+        <tr><td><span class="kmt">!vs &lt;ürün1&gt; vs &lt;ürün2&gt;</span></td><td>İki donanımı TechPowerUp verileriyle karşılaştırır. Günde 3.</td></tr>
+        <tr><td>Selam</td><td>Yayında ilk yazdığında bot seni selamlar.</td></tr>
+      </tbody>
+    </table>
+    <ul class="ornekler">
+      <li>!topla 60000 TL oyun bilgisayarı</li>
+      <li>!vs RTX 5070 vs RX 9070</li>
+    </ul>
+  </section>
+
+  <h2><span class="no">06</span>Neye cevap vermez?</h2>
+  <ul class="liste">
+    <li><strong>Siyaset:</strong> siyasete girmez.</li>
+    <li><strong>Din:</strong> dini sorularda Diyanet İşleri Başkanlığı'na yönlendirir (bayram kutlamaları serbest 🙂).</li>
+    <li><strong>Küfür ve hakaret:</strong> küfürlü mesajlara cevap vermez.</li>
+    <li><strong>Söz vermez:</strong> Murat adına söz veremez, plan açıklayamaz.</li>
+    <li><strong>Uydurmaz:</strong> bilmediği şeyi uydurmak yerine bilmediğini söyler.</li>
+    <li><strong>Link:</strong> sadece Murat'ın kanalına, Steam'e, İtopya'ya ve Akakçe'ye link verir.</li>
+  </ul>
+
+  <h2><span class="no">07</span>Yayında sorun mu var?</h2>
+  <p>Ses ya da görüntü gittiyse chat'e yazman yeterli (<em>"ses gelmiyor"</em>, <em>"görüntü dondu"</em> gibi). Kısa sürede birkaç kişi yazınca bot Murat'a hemen haber verir.</p>
+
+  <h2><span class="no">08</span>Bilmen gerekenler</h2>
+  <ul class="liste">
+    <li>GamsızAI bir yapay zekadır, <strong>hata yapabilir</strong>. Önemli konularda bilgiyi kaynağından kontrol et.</li>
+    <li>Sorduğun soru ve chat'in son mesajları, cevap üretmek için yapay zeka hizmetine gönderilir. Ayrıntılar <a href="privacy.html">gizlilik sayfasında</a>.</li>
+  </ul>
+
+  <footer>
+    <p><a href="https://www.youtube.com/@muratgamsiz">Murat Gamsız YouTube</a> · <a href="https://www.youtube.com/@GamsizAI">GamsızAI kanalı</a> · <a href="privacy.html">Gizlilik</a></p>
+    <p class="piksel">RUN<br><span class="imlec"></span></p>
+  </footer>
+</main>
+</body>
+</html>
