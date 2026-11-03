@@ -15,36 +15,80 @@
 <body>
 <main>
 <h1>GamsızAI Gizlilik Politikası</h1>
-<p>Son güncelleme: 2 Kasım 2026</p>
-<p>GamsızAI, Murat Gamsız'ın YouTube kanalının (<a href="https://www.youtube.com/@muratgamsiz">youtube.com/@muratgamsiz</a>) canlı yayınlarında çalışan bir sohbet botudur. Bot yalnızca kanal sahibinin kendi kanalı için kullanılır.</p>
+<p>Son güncelleme: 4 Kasım 2026</p>
+<p>GamsızAI, Murat Gamsız'ın YouTube kanalının (<a href="https://www.youtube.com/@muratgamsiz">youtube.com/@muratgamsiz</a>) canlı yayınlarında ve video yorumlarında çalışan bir sohbet botudur. Bot yalnızca kanal sahibinin kendi kanalı için kullanılır; başka kanallara hizmet vermez, kullanıcı hesabı açtırmaz.</p>
+
+<h2>YouTube API Hizmetleri</h2>
+<p>GamsızAI, <strong>YouTube API Hizmetlerini</strong> kullanır. GamsızAI ile etkileşime giren herkes <a href="https://www.youtube.com/t/terms">YouTube Hizmet Şartları</a>'na tabidir. YouTube'dan alınan veriler ayrıca <a href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>'na tabidir. Botun kullanım şartları: <a href="terms.html">GamsızAI Kullanım Şartları</a>.</p>
+
 <h2>Hangi verileri kullanır?</h2>
 <ul>
-<li>Canlı yayın sohbetine yazılan herkese açık mesajları ve yazanın YouTube'da görünen kullanıcı adını, yalnızca o mesaja cevap verebilmek için okur.</li>
-<li>YouTube hesabına erişimi yalnızca bot kanalı (GamsızAI) adına canlı sohbete mesaj yazmak için kullanır.</li>
+<li><strong>Canlı sohbet:</strong> canlı yayın sohbetine yazılan herkese açık mesajları ve yazanın YouTube'da görünen adını, yalnızca o mesaja cevap verebilmek için okur.</li>
+<li><strong>Video yorumları:</strong> kanalın videolarına yazılan herkese açık yorumları okur; içinde soru olanlara bir cevap taslağı hazırlar. Taslaklar kanal sahibi tarafından tek tek okunup onaylanmadan yayımlanmaz.</li>
+<li><strong>Yayın bilgisi:</strong> yayının başlığı, açıklaması, başlangıç saati, izleyici ve beğeni sayısı (sorulara doğru cevap vermek için).</li>
+<li><strong>Hesap erişimi:</strong> Google hesabı erişimi (OAuth) yalnızca GamsızAI bot kanalı adına canlı sohbete mesaj yazmak ve onaylanan yorum cevaplarını yazmak için kullanılır. İzleyicilerden hiçbir Google hesabı erişimi istenmez.</li>
 </ul>
-<h2>Veriler nasıl işlenir?</h2>
+
+<h2>Veriler nasıl işlenir ve paylaşılır?</h2>
 <ul>
-<li>Bir izleyici bota soru sorduğunda, soru ve sohbetin son birkaç mesajı cevap üretilmesi için yapay zeka hizmet sağlayıcısına gönderilir.</li>
-<li>Hava durumu veya maç sonucu sorulduğunda yalnızca şehir veya takım adı ilgili ücretsiz bilgi servisine gönderilir; kişisel bilgi gönderilmez.</li>
-<li><code>!me</code> komutu için bot, sohbete yazan her hesabın yalnızca YouTube kanal kimliğini, kaç canlı yayında yazdığını, toplam mesaj sayısını ve ilk/son görülme tarihini kanal sahibinin bilgisayarında tutar. Ad ve mesaj içeriği saklanmaz; 30 gün boyunca sohbette görünmeyen hesabın kaydı kendiliğinden silinir.</li>
-<li>Sohbet kayıtları yalnızca hata ayıklama amacıyla kanal sahibinin kendi bilgisayarında tutulur ve üçüncü kişilerle paylaşılmaz.</li>
+<li>Bir izleyici bota soru sorduğunda, soru ve sohbetin son birkaç mesajı cevap üretilmesi için yapay zeka hizmet sağlayıcısına (Anthropic) gönderilir. Video yorumlarına cevap taslağı hazırlanırken de yorum metni aynı sağlayıcıya gönderilir.</li>
+<li>Hava durumu, maç sonucu veya döviz kuru sorulduğunda yalnızca şehir, takım veya para birimi adı ilgili ücretsiz bilgi servisine gönderilir; kişisel bilgi gönderilmez.</li>
+<li>Veriler satılmaz, reklam amacıyla kullanılmaz ve bunların dışında üçüncü kişilerle paylaşılmaz.</li>
+<li>GamsızAI çerez (cookie) kullanmaz ve izleyicilerin cihazlarında bilgi saklamaz.</li>
 </ul>
-<h2>Ne yapmaz?</h2>
+
+<h2>Ne kadar süre saklanır?</h2>
 <ul>
-<li>Kişisel verileri satmaz, reklam amacıyla kullanmaz, üçüncü kişilerle paylaşmaz.</li>
-<li>Google/YouTube hesap bilgilerini kanal sahibinin bilgisayarı dışında saklamaz.</li>
+<li><strong>Sohbet kayıtları</strong> yalnızca hata ayıklama amacıyla kanal sahibinin bilgisayarında tutulur ve <strong>3 gün</strong> sonra kendiliğinden silinir.</li>
+<li><strong><code>!me</code> sayacı:</strong> sohbete yazan her hesabın yalnızca YouTube kanal kimliği, kaç canlı yayında yazdığı, toplam mesaj sayısı ve ilk/son görülme tarihi tutulur. Ad ve mesaj içeriği saklanmaz; <strong>30 gün</strong> boyunca sohbette görünmeyen hesabın kaydı kendiliğinden silinir.</li>
+<li><strong>Video yorumları</strong> ve yazar adları en fazla <strong>30 gün</strong> saklanır, sonra kendiliğinden silinir.</li>
+<li>Kanal üyelerinin <code>!murata</code> ile ilettiği sorular <strong>30 gün</strong> sonra silinir.</li>
+<li>Google/YouTube giriş bilgileri yalnızca kanal sahibinin bilgisayarında saklanır.</li>
 </ul>
-<h2>Google API Hizmetleri</h2>
-<p>GamsızAI'ın Google API'lerinden aldığı bilgilerin kullanımı, Sınırlı Kullanım (Limited Use) koşulları dahil olmak üzere <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Hizmetleri Kullanıcı Verileri Politikası</a>'na uygundur.</p>
+
+<h2>Verilerinizi silme ve izni geri alma</h2>
+<ul>
+<li>Hakkınızda tutulan kaydın (örneğin <code>!me</code> sayacı) silinmesini istiyorsanız aşağıdaki adrese yazın; kayıt en geç 7 gün içinde silinir.</li>
+<li>GamsızAI'a Google hesabınızla erişim izni verdiyseniz (yalnızca kanal sahibi için geçerlidir), bu izni istediğiniz zaman <a href="https://myaccount.google.com/permissions">Google hesabı güvenlik ayarları</a> sayfasından geri alabilirsiniz.</li>
+</ul>
+
+<h2>Google API Hizmetleri Kullanıcı Verileri Politikası</h2>
+<p>GamsızAI'ın Google API'lerinden aldığı bilgilerin kullanımı ve aktarımı, Sınırlı Kullanım (Limited Use) koşulları dahil olmak üzere <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Hizmetleri Kullanıcı Verileri Politikası</a>'na uygundur.</p>
 <h2>İletişim</h2>
 <p>muratgamsiz@gmail.com</p>
 <hr>
 <h1>GamsizAI Privacy Policy</h1>
-<p>Last updated: November 2, 2026</p>
-<p>GamsizAI is a chat bot used in the live streams of Murat Gamsız's YouTube channel. It is operated solely by the channel owner for his own channel.</p>
-<p><strong>Data used:</strong> public live chat messages and the author's public YouTube display name, read only to reply to that message. YouTube account access is used only to post chat messages as the bot channel.</p>
-<p><strong>Processing:</strong> when a viewer asks the bot a question, the question and a few recent chat messages are sent to an AI service provider to generate a reply. Weather or football questions send only a city or team name to free public data services. For the !me command the bot keeps, on the owner's computer, only each chat author's YouTube channel ID, the number of streams and messages, and first/last seen dates (no names or message content); records not seen for 30 days are deleted automatically. Logs are kept only on the owner's computer for troubleshooting and are not shared.</p>
-<p>The bot does not sell, share or use personal data for advertising, and does not store Google/YouTube account data outside the owner's computer.</p>
+<p>Last updated: November 4, 2026</p>
+<p>GamsizAI is a chat bot used in the live streams and video comments of Murat Gamsız's YouTube channel (<a href="https://www.youtube.com/@muratgamsiz">youtube.com/@muratgamsiz</a>). It is operated solely by the channel owner for his own channel; it does not serve other channels and has no user sign-up.</p>
+<h2>YouTube API Services</h2>
+<p>GamsizAI uses <strong>YouTube API Services</strong>. By interacting with GamsizAI you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Data obtained from YouTube is also subject to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. GamsizAI's own terms: <a href="terms.html">GamsizAI Terms of Service</a>.</p>
+<h2>Data accessed and used</h2>
+<ul>
+<li><strong>Live chat:</strong> public live chat messages and the author's public display name, read only to reply to that message.</li>
+<li><strong>Video comments:</strong> public comments on the channel's videos are read; for comments that contain a question, a reply draft is prepared. Drafts are never published until the channel owner reviews and approves each one.</li>
+<li><strong>Broadcast data:</strong> title, description, start time, concurrent viewer and like counts, used to answer questions correctly.</li>
+<li><strong>Account access:</strong> Google account access (OAuth) is used only to post live chat messages and approved comment replies as the GamsizAI bot channel. Viewers are never asked for Google account access.</li>
+</ul>
+<h2>Processing and sharing</h2>
+<ul>
+<li>When a viewer asks the bot a question, the question and a few recent chat messages are sent to an AI service provider (Anthropic) to generate a reply; comment text is sent to the same provider to draft comment replies.</li>
+<li>Weather, football or currency questions send only a city, team or currency name to free public data services.</li>
+<li>Data is never sold, never used for advertising and not otherwise shared with third parties.</li>
+<li>GamsizAI does not use cookies and does not store information on viewers' devices.</li>
+</ul>
+<h2>Retention</h2>
+<ul>
+<li>Chat logs are kept on the owner's computer for troubleshooting only and are deleted automatically after <strong>3 days</strong>.</li>
+<li><strong>!me counter:</strong> only the chat author's YouTube channel ID, number of streams and messages, and first/last seen dates (no names or message content); records not seen for <strong>30 days</strong> are deleted automatically.</li>
+<li>Video comments and author names are kept for at most <strong>30 days</strong> and then deleted automatically.</li>
+<li>Member questions sent with !murata are deleted after <strong>30 days</strong>.</li>
+<li>Google/YouTube credentials are stored only on the owner's computer.</li>
+</ul>
+<h2>Deletion and revoking access</h2>
+<ul>
+<li>To have any record about you deleted (for example the !me counter), email the address below; it will be deleted within 7 days.</li>
+<li>If you granted GamsizAI access to a Google account (applies only to the channel owner), you can revoke it at any time on the <a href="https://myaccount.google.com/permissions">Google security settings page</a>.</li>
+</ul>
 <p>GamsizAI's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 <p>Contact: muratgamsiz@gmail.com</p>
 <p><a href="index.html">← GamsızAI</a></p>
