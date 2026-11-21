@@ -1,0 +1,12 @@
+# Gizli dosyalar - bunlar ASLA depoya girmez
+# Claude Code'un "bir daha sorma" onaylari (icinde sifre/anahtar kalabilir)
+.claude/settings.local.json
+.claude/*.local.*
+# Ortam degiskenleri ve anahtar dosyalari
+.env
+*.env
+token*.json
+client_secret*.json
+anahtar.txt
+# Python gecici dosyalari
+__pycache__/
